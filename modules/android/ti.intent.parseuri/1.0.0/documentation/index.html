@@ -1,0 +1,18 @@
+<h1>Intent ParseUri Module for Titanium Mobile</h1>
+
+<h2>Usage</h2>
+
+<p><code>javascript
+var yoIntentParser = require(&#39;ti.intent.parseuri&#39;);
+yoIntentParser.parseUri(&#39;intent://pay?srCode=0000000#Intent;scheme=shinhan-sr-ansimclick;package=com.shcard.smartpay;end;&#39;);
+/*
+	Result : 
+	{
+	    &quot;packageName&quot;: &quot;com.shcard.smartpay&quot;,
+	    &quot;error&quot;: false,
+	    &quot;data&quot;: &quot;shinhan-sr-ansimclick://pay?srCode=0000000&quot;
+	}
+ */
+</code></p>
+
+<p>This module use <code>Intent.parseUri(url, Intent.URI_INTENT_SCHEME);</code>.</p>

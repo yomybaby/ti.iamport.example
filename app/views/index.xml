@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container">
+		<Widget id="IMP" src="kr.yostudio.iamport"></Widget>
+	</Window>
+</Alloy>

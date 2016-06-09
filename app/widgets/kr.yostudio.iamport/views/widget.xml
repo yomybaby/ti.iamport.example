@@ -1,0 +1,6 @@
+<Alloy>
+	<View>
+		<WebView id="webView" onOnStopBlacklistedUrl="onBlack" onBeforeload="onBeforeload"></WebView>
+		<ActivityIndicator id="aIndicator" style="Ti.UI.ActivityIndicatorStyle.BIG"></ActivityIndicator>
+	</View>
+</Alloy>

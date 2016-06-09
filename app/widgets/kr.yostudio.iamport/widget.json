@@ -1,0 +1,13 @@
+{
+	"id": "kr.yostudio.iamport",
+	"name": "kr.yostudio.iamport",
+	"description" : "I'mport; PG사 ",
+	"author": "",
+	"version": "0.1",
+	"copyright":"Copyright (c) 2016",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"소액결제, payment, 신용카드",
+	"platforms":"android,ios"
+}
