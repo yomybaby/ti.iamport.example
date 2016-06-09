@@ -15,6 +15,7 @@
     ```
     ti sdk install https://github.com/yomybaby/ti.iamport.example/raw/master/tisdk/mobilesdk-5.2.2.GA_webview_blacklist-osx.zip
     ```
+- iOS의 경우 iOS9 부터 url Scheme에 대한 보안정책 변경으로 `tiapp.xml`의 plist 부준에 'ispmobile'을 추가해줘야합니다. isp관련해서 특징이 있어 iOS에서는 `ispmobile://` 주소만 따로 처리합니다. ( [tiapp.xml](https://github.com/yomybaby/ti.iamport.example/blob/master/tiapp.xml#L40) 참고)
     
 ### 사용 예
 ```javascript
