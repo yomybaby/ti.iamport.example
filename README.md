@@ -11,6 +11,7 @@
 - `/app/widgets/kr.yostudio.iamport` 위젯 설치
 - [yomybaby/ti.intent.parseuri](https://github.com/yomybaby/ti.intent.parseuri/tree/master/android/dist) 모듈 설치
 - WebView에 추가 예정인 `blacklistedURLs` 속성을 사용해야합니다. 5.4.0 버전에 추가 예정이며 현재는 별도로 수정된 sdk를 사용해야합니다.
+
     ```
     ti sdk install https://github.com/yomybaby/ti.iamport.example/raw/master/tisdk/mobilesdk-5.2.2.GA_webview_blacklist-osx.zip
     ```
