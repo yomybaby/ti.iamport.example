@@ -1,4 +1,5 @@
-# Titanium 결제 Alloy Widget (iamport를 이용한 PG사 연동)
+# Titanium 결제 Alloy Widget 
+iamport를 이용한 PG사 연동
 
 > 더 상세히 사용법을 추가하도록 하겠습니다.
 
@@ -8,10 +9,19 @@
 
 ## 사용법
 ### 설치
+설치는 타이타늄 패키지 매니저에 해당하는 [gitt.io](http://gitt.io)를 이용하면 편리합니다. gitt.io가 처음이라면 `npm install -g gittio`로 `gittio` cli를 설치하세요.
 - `/app/widgets/kr.yostudio.iamport` 위젯 설치
+ 
+    ```
+    $ gittio install kr.yostudio.iamport
+    ```
 - [yomybaby/ti.intent.parseuri](https://github.com/yomybaby/ti.intent.parseuri/tree/master/android/dist) 모듈 설치
-- WebView에 추가 예정인 `blacklistedURLs` 속성을 사용해야합니다. 5.4.0 버전에 추가 예정이며 현재는 별도로 수정된 sdk를 사용해야합니다.
 
+    ```
+    $ gittio install ti.intent.parseuri
+    ```
+- WebView에 추가 예정인 `blacklistedURLs` 속성을 사용해야합니다. 5.4.0 버전에 추가 예정이며 현재는 별도로 수정된 sdk를 사용해야합니다.
+    - 아래 명령어로 설치할 때 에러가 난다면 zip파일을 따로 받아서 압축을 풀고 `~/Library/Application\ Support/Titanium/mobilesdk/osx/`에 압출풀어서 생긴 sdk 폴더(`mobilesdk/osx/5.x.x.GA_webview_blacklist`)를 옮겨 놓으세요.
     ```
     ti sdk install https://github.com/yomybaby/ti.iamport.example/raw/master/tisdk/mobilesdk-5.2.2.GA_webview_blacklist-osx.zip
     ```
