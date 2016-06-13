@@ -1,4 +1,5 @@
-# Titanium 결제 Alloy Widget (iamport를 이용한 PG사 연동)
+# Titanium 결제 Alloy Widget 
+iamport를 이용한 PG사 연동
 
 > 더 상세히 사용법을 추가하도록 하겠습니다.
 
