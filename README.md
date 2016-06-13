@@ -8,8 +8,15 @@
 
 ## 사용법
 ### 설치
+설치는 타이타늄 패키지 매니저에 해당하는 [gitt.io](http://gitt.io)를 이용하면 편리합니다. gitt.io가 처음이라면 `npm install -g gittio`로 `gittio` cli를 설치하세요.
 - `/app/widgets/kr.yostudio.iamport` 위젯 설치
+    ```
+    $ gittio install kr.yostudio.iamport
+    ```
 - [yomybaby/ti.intent.parseuri](https://github.com/yomybaby/ti.intent.parseuri/tree/master/android/dist) 모듈 설치
+    ```
+    $ gittio install ti.intent.parseuri
+    ```
 - WebView에 추가 예정인 `blacklistedURLs` 속성을 사용해야합니다. 5.4.0 버전에 추가 예정이며 현재는 별도로 수정된 sdk를 사용해야합니다.
 
     ```
