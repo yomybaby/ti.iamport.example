@@ -57,12 +57,12 @@ $.webView.addEventListener('load',function (e) {
 
 function onBlack(e){
 	console.log('WEBVIEW stopBlackListedURLs : ', e.url);
-	
+
 	// 성공 혹은 실패에 따른 redirect를 잡아서 widget의 이벤트로 처리
 	if(e.url.indexOf('yostudioiamport://') == 0){
 		var URL = XCallbackURL.parse(decodeURIComponent(e.url));
 		var resultObj = URL.params();
-		if(resultObj.imp_success){
+		if(resultObj.imp_success == "true"){
 			_success(resultObj);
 		}else{
 			$.cancel(resultObj);
@@ -70,12 +70,12 @@ function onBlack(e){
 		Ti.API.debug(JSON.stringify(URL.params()));
 		return;
 	}
-	
+
 	if(OS_IOS){
 		if(e.url.indexOf('ispmobile')==0){
 			if(!Ti.Platform.canOpenURL(e.url)){
 				Ti.UI.setBackgroundColor('white');
-				
+
 				var dialog = Ti.UI.createAlertDialog({
 			    message: '모바일 ISP가 설치되어 있지 않아\nApp Store로 이동합니다. 설치 후 다시 시도해주세요.'
 			  });
@@ -89,7 +89,7 @@ function onBlack(e){
 			}
 		}
 	}
-		
+
 	/*
 	Android 절차
 	- startActivity 로 인텐트 실행해보고
@@ -108,9 +108,9 @@ function onBlack(e){
       Ti.Android.currentActivity.startActivity(intent);
     } catch (tryError) {
       Ti.API.info('Caught Error launching intent: ' + tryError);
-			
+
 			if(e.url.indexOf('ispmobile://')==0){ //ISP 일경우
-				console.log('URL starts with ispmobile://, but fail with itent'); 
+				console.log('URL starts with ispmobile://, but fail with itent');
 				var dialog = Ti.UI.createAlertDialog({
 					message: '모바일 ISP어플리케이션이 설치되어있지 않습니다. \n설치를 눌러 진행해주십시요.\n취소를 누르면 결제가 취소됩니다.',
 					buttonNames: ['취소', '확인'],
@@ -128,8 +128,8 @@ function onBlack(e){
 				console.log('Trying to open market that packageName');
 				console.log(e.url);
 				console.log('PackageName is : ',parsedUri.packageName);
-				
-				var marketURL = "market://details?id="+ parsedUri.packageName; 
+
+				var marketURL = "market://details?id="+ parsedUri.packageName;
 				var excepIntent = Ti.Android.createIntent({
 	          action: Ti.Android.ACTION_VIEW,
 	          data: marketURL
