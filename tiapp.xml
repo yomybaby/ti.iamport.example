@@ -63,7 +63,7 @@
 		<target device="mobileweb">false</target>
 		<target device="windows">false</target>
 	</deployment-targets>
-	<sdk-version>5.2.2.GA_webview_blacklist</sdk-version>
+	<sdk-version>5.5.1.YO</sdk-version>
 <plugins><plugin version="1.0">ti.alloy</plugin>
 </plugins>
 </ti:app>
